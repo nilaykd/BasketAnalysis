@@ -45,9 +45,7 @@ support = st.slider("Enter the Minimum Support Value", min_value=0.01,
 
 confidence = st.slider("Enter the Minimum Confidence Value", min_value=0.01,
                        max_value=1.0, value=0.6, help=confidence_helper)
-                    max_value=1.0, value=0.01,
-                    help=support_helper)
-
+                
 confidence = st.slider("Enter the Minimum Confidence Value", min_value=0.01,
                        max_value=1.0, value=0.2, help=confidence_helper)
 
