@@ -23,7 +23,7 @@ default_csv = st.selectbox(
 
 st.markdown('Here are some sample rows from the dataset')
 csv_file = pd.read_csv(default_csv, header=None, sep=",")
-st.write(csv_file[0].str.split("\,", expand=True).head())
+st.write(csv_file.head())
 
 st.markdown('---')
 st.markdown("## Inputs")
