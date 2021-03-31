@@ -22,8 +22,8 @@ elif default_csv == 'tesco.csv':
     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
 st.markdown('Here are some sample rows from the dataset')
-csv_file = pd.read_csv(default_csv, header=None, sep="\n")
-st.write(csv_file[0].str.split("\,", expand=True).head())
+csv_file = pd.read_csv(default_csv, header=None, sep=",")
+st.write(csv_file[0].str.split(",", expand=True).head())
 
 st.markdown('---')
 st.markdown("## Inputs")
