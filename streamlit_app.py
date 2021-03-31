@@ -22,7 +22,7 @@ default_csv = st.selectbox(
 #     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
 st.markdown('Here are some sample rows from the dataset')
-csv_file = pd.read_csv(default_csv, header=None, sep=",")
+csv_file = pd.read_csv(default_csv, encoding = "UTF-16", header=0, sep=",")
 st.write(csv_file.head())
 
 st.markdown('---')
