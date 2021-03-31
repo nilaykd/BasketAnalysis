@@ -12,7 +12,7 @@ st.sidebar.markdown(
 )
 
 default_csv = st.selectbox(
-    "Select one of the sample csv files", ("INTEGRATED-DATASET.csv", "tesco.csv")
+    "Select one of the sample csv files", ("data7.csv", "tesco.csv")
 )
 
 if default_csv == 'INTEGRATED-DATASET.csv':
