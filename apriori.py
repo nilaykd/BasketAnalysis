@@ -138,9 +138,9 @@ def to_str_results(items, rules):
     return i, r
 
 
-def dataFromFile(fname):
+def dataFromFile(df):
     """Function which reads from the file and yields a generator"""
-    df=pd.read_csv(fname, encoding = "UTF-16", sep=',', header=0)
+    #df=pd.read_csv(fname, encoding = "UTF-16", sep=',', header=0)
     df.index.name="Check Identifier"
     df=df.pivot(index='Check Identifier', columns='Recipe Name', values='Recipe Name')
     def defragment(x):
