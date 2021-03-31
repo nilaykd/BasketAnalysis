@@ -33,7 +33,7 @@ st.markdown('''
             
             **Confidence** shows transactions where the items are purchased one after the other.''')
 
-st.markdown('Support and Confidence for Itemsets A and B can be represented by formulas')
+#st.markdown('Support and Confidence for Itemsets A and B can be represented by formulas')
 
 support_helper = ''' > Support(A) = (Number of transactions in which A appears)/(Total Number of Transactions') '''
 confidence_helper = ''' > Confidence(A->B) = Support(AUB)/Support(A)') '''
