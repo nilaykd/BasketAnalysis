@@ -4,26 +4,26 @@ from apriori import runApriori, dataFromFile, to_str_results
 
 st.markdown("# Apriori Streamlit")
 
-st.sidebar.markdown(
-    """The code attempts to implement the following paper:
+# st.sidebar.markdown(
+#     """The code attempts to implement the following paper:
 
-> *Agrawal, Rakesh, and Ramakrishnan Srikant. "Fast algorithms for mining association rules." Proc. 20th int. conf. very large data bases, VLDB. Vol. 1215. 1994.*
-"""
-)
+# > *Agrawal, Rakesh, and Ramakrishnan Srikant. "Fast algorithms for mining association rules." Proc. 20th int. conf. very large data bases, VLDB. Vol. 1215. 1994.*
+# """
+# )
 
 default_csv = st.selectbox(
     "Select one of the sample csv files", ("data7.csv", "data5.csv")
 )
 
-if default_csv == 'INTEGRATED-DATASET.csv':
-    st.markdown('''The dataset is a copy of the “Online directory of certified businesses with a detailed profile” file from the 
-    Small Business Services (SBS) dataset in the NYC Open Data Sets http://nycopendata.socrata.com/''')
-elif default_csv == 'tesco.csv':
-    st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
+# if default_csv == 'INTEGRATED-DATASET.csv':
+#     st.markdown('''The dataset is a copy of the “Online directory of certified businesses with a detailed profile” file from the 
+#     Small Business Services (SBS) dataset in the NYC Open Data Sets http://nycopendata.socrata.com/''')
+# elif default_csv == 'tesco.csv':
+#     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
 st.markdown('Here are some sample rows from the dataset')
 csv_file = pd.read_csv(default_csv, header=None, sep=",")
-st.write(csv_file[0].str.split(",", expand=True).head())
+st.write(csv_file[0].str.split("\,", expand=True).head())
 
 st.markdown('---')
 st.markdown("## Inputs")
