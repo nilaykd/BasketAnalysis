@@ -57,7 +57,21 @@ def getItemSetTransactionList(data_iterator):
         for item in transaction:
             itemSet.add(frozenset([item]))  # Generate 1-itemSets      
     return itemSet, transactionList
-    
+
+def fullDatasetApriori(data_iter)
+
+    itemSet, transactionList = getItemSetTransactionList(data_iter)
+    freqSet = defaultdict(int)
+
+    def getSupport(itemSet):
+        """local function which Returns the support of an item"""
+        #print(len(transactionList))
+        return float(itemSet[item]) / len(transactionList)
+
+    toRetItems = []
+    for key, value in itemSet.items():
+        toRetItems.extend([(tuple(item), getSupport(item)) for item in value])
+
 
 
 def runApriori(data_iter, minSupport, minConfidence):
@@ -146,7 +160,6 @@ def dataFromFile(df):
     def defragment(x):
         values = x.dropna().values
         return pd.Series(values, index=df.columns[:len(values)])
-
     long_index = pd.MultiIndex.from_product([df.index, df.columns])
     df=df.stack().groupby(level='Check Identifier').apply(defragment).reindex(long_index).unstack()
     df.to_csv("temp.csv",sep=",",header=False,index=False,na_rep='')
