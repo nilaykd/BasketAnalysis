@@ -22,7 +22,7 @@ if uploaded_file is not None:
     #     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
     st.markdown('Here are some sample rows from the dataset')
-    csv_file = pd.read_excel(uploaded_file)
+    csv_file = pd.read_excel(uploaded_file, engine='openpyxl')
     st.write(csv_file.head())
 
     st.markdown('---')
