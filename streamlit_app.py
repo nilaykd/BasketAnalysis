@@ -12,7 +12,7 @@ st.markdown("# Market Basket Analysis")
 # """
 # )
 
-uploaded_file = st.file_uploader("Choose a file", type=['csv'])
+uploaded_file = st.file_uploader("Choose a file", type=['xlsx'])
 if uploaded_file is not None:
 
     # if default_csv == 'INTEGRATED-DATASET.csv':
@@ -22,7 +22,7 @@ if uploaded_file is not None:
     #     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
     st.markdown('Here are some sample rows from the dataset')
-    csv_file = pd.read_csv(uploaded_file, encoding = "UTF-16", header=0, sep=",")
+    csv_file = pd.read_excel(uploaded_file)
     st.write(csv_file.head())
 
     st.markdown('---')
