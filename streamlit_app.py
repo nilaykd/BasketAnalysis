@@ -40,7 +40,7 @@ if uploaded_file is not None:
     st.markdown('---')
 
     support = st.slider("Enter the Minimum Support Value", min_value=0.01,
-                        max_value=1.0, value=0.01,
+                        max_value=1.0, value=0.6,
                         help=support_helper)
 
     confidence = st.slider("Enter the Minimum Confidence Value", min_value=0.01,
