@@ -12,7 +12,7 @@ st.markdown("# Market Basket Analysis")
 # """
 # )
 
-uploaded_file = st.file_uploader("Choose a file", type=['xlsx'])
+uploaded_file = st.file_uploader("Choose a file", type=['xls'])
 if uploaded_file is not None:
 
     # if default_csv == 'INTEGRATED-DATASET.csv':
